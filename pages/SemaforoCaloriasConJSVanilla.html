@@ -53,7 +53,7 @@
             <td>{{producto.color}}</td>
             <td>{{producto.calorias}}</td>
             <td>
-            <a class="btn btn-primary" :href="'producto_update.html?id='+ producto.id" >Editar</a>
+            <button type="button" a class="btn btn-primary" :href="'producto_update.html?id='+ producto.id" >Editar</a>
             <button type="button" class="btn btn-danger" v-on:click="eliminar(producto.id)" >Eliminar</button>
         </td></tr></tbody>
         </table>
