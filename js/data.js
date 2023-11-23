@@ -1,3 +1,6 @@
+
+
+
 let Calorico = "red"
 let Medio = "yellow"
 let Light = "green"

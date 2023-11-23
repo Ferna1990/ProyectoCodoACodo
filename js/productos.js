@@ -10,10 +10,10 @@ error:false,
 cargando:true,
 /*atributos para el guardar los valores del formulario */
 id:0,
-nombre:"",
-imagen:"",
-/*stock:0,
-precio:0,*/
+Nombre:"",
+Foto:"",
+color:"",
+Calorias:"0",
 }
 },
 methods: {
