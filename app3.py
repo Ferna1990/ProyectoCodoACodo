@@ -14,7 +14,15 @@ app.config['MYSQL_DATABASE_HOST'] = 'producto'
 
 mysql.init_app(app)
 
+@app.route('/')
+def index():
+    conn=mysql.connect()
+    cursor=conn.cursor()
+    sql = "insert into producto(nombre) values (Pizza);"
+    cursor.execute(sql)
+    conn.commit()
 
+    return render_template('index.html')
 
 if __name__== '__main__':
     app.run(debug=True)
