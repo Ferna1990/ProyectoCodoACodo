@@ -47,7 +47,7 @@ ma = Marshmallow(app): Se crea un objeto ma de la clase Marshmallow, que se util
 # Configura la URI de la base de datos con el driver de MySQL, usuario, contraseña y nombre de la base de datos
 # URI de la BD == Driver de la BD://user:password@UrlBD/nombreBD
 # app.config["SQLALCHEMY_DATABASE_URI"] = "mysql+pymysql://root:root@localhost/proyecto"
-app.config["SQLALCHEMY_DATABASE_URI"] = "mysql+pymysql://root:@localhost/productos/productos/producto"
+app.config["SQLALCHEMY_DATABASE_URI"] = "mysql+pymysql://root:@localhost/productos"
 # Configura el seguimiento de modificaciones de SQLAlchemy a False para mejorar el rendimiento
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 # Crea una instancia de la clase SQLAlchemy y la asigna al objeto db para interactuar con la base de datos
@@ -110,7 +110,7 @@ result = productos_schema.dump(all_productos): Los registros obtenidos se serial
 return jsonify(result): El resultado serializado en formato JSON se devuelve como respuesta al cliente utilizando la función jsonify() de Flask. Esta función envuelve el resultado en una respuesta HTTP con el encabezado Content-Type establecido como application/json.
 
 '''
-@app.route("/productos/productos/producto", methods=["GET"])
+@app.route("/productos", methods=["GET"])
 def get_producto():
     """
     Endpoint para obtener todos los productos de la base de datos.
@@ -140,7 +140,7 @@ update_producto(Id):
     # Retorna un JSON con el producto actualizado
 
 '''
-@app.route("/productos/productos/producto/<id>", methods=["GET"])
+@app.route("/productos/productos", methods=["GET"])
 def get_producto(id):
     """
     Endpoint para obtener un producto específico de la base de datos.
@@ -150,7 +150,7 @@ def get_producto(id):
     producto = producto.query.get(id)  # Obtiene el producto correspondiente al ID recibido
     return producto_schema.jsonify(producto)  # Retorna el JSON del producto
 
-@app.route("/productos/productos/producto/<id>", methods=["DELETE"])
+@app.route("/productos", methods=["DELETE"])
 def delete_producto(id):
     """
     Endpoint para eliminar un producto de la base de datos.
@@ -162,7 +162,7 @@ def delete_producto(id):
     db.session.commit()  # Guarda los cambios en la base de datos
     return producto_schema.jsonify(producto)  # Retorna el JSON del producto eliminado
 
-@app.route("/productos/productos/producto", methods=["POST"])  # Endpoint para crear un producto
+@app.route("/productos", methods=["POST"])  # Endpoint para crear un producto
 def create_producto():
     """
     Endpoint para crear un nuevo producto en la base de datos.
@@ -179,7 +179,7 @@ def create_producto():
     db.session.commit()  # Guarda los cambios en la base de datos
     return producto_schema.jsonify(new_producto)  # Retorna el JSON del nuevo producto creado
 
-@app.route("/productos/productos/producto/<id>", methods=["PUT"])  # Endpoint para actualizar un producto
+@app.route("/productos<id>", methods=["PUT"])  # Endpoint para actualizar un producto
 def update_producto(id):
     """
     Endpoint para actualizar un producto existente en la base de datos.
@@ -206,3 +206,38 @@ Este código es el programa principal de la aplicación Flask. Se verifica si el
 if __name__ == "__main__":
     # Ejecuta el servidor Flask en el puerto 3306 en modo de depuración
     app.run(debug=True, port=3306)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    app2
+
+    from flask import Flask, render_template
+import os
+template_dir= os.path.dirname(os.path.abspath(os.path.dirname(__file__)))
+template_dir= os.path.join(template_dir,'comidas_repidas', 'pages')
+
+app=Flask(__name__, template_folder= template_dir)
+
+@app.route('/')
+def home():
+    return render_template('SemaforoCaloriasConJSVanilla.html')
+
+if __name__=='__main__':
+    app.run(debug=True, port=4000)
+
+
