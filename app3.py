@@ -7,10 +7,10 @@ app= Flask(__name__)
 mysql=MySQL()
 
 
-app.config['MYSQL_DATABASE_HOST'] = 'Localhost'
+app.config['MYSQL_DATABASE_HOST'] = '127.0.0.1'
 app.config['MYSQL_DATABASE_HOST'] = 'root'
 app.config['MYSQL_DATABASE_HOST'] = ''
-app.config['MYSQL_DATABASE_HOST'] = 'producto'
+app.config['MYSQL_DATABASE_HOST'] = 'productos'
 
 mysql.init_app(app)
 
@@ -22,7 +22,7 @@ def index():
     cursor.execute(sql)
     conn.commit()
 
-    return render_template('index.html')
+    return render_template('')
 
 if __name__== '__main__':
     app.run(debug=True)
