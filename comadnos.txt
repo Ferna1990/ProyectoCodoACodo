@@ -447,3 +447,38 @@ def update_producto(id):
 if __name__ == "__main__":
     # Ejecuta el servidor Flask en el puerto 3306 en modo de depuración
     app.run(debug=True)
+
+
+
+
+tabla de semaforo de Calorias
+
+
+<div id="filtrador" class="filtrador">
+        <label> Filtrar: green=Light, yellow=Medio, red=Calorico: </label>
+        <input id="inputColor" type="text" onkeyup="handlerFiltrarPorColor()">
+    </div>
+    <hr>
+    <div class="table-responsive" >
+        <table class="table table-bordered">
+            <thead></thead>
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Color</th>
+                <th scope="col">Calorias</th>
+                <th scope="col">Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="" v-for="producto in productos">
+            <td scope="row">{{producto.id}}</td>
+            <td scope="row">{{producto.nombre}}</td>
+            <td><img width="60" :src="producto.imagen" :alt="producto.nombre"></td>
+            <td>{{producto.color}}</td>
+            <td>{{producto.calorias}}</td>
+            <td>
+            <button type="button" a class="btn btn-primary" :href="'producto_update.html?id='+ producto.id" >Editar</a>
+            <button type="button" class="btn btn-danger" v-on:click="eliminar(producto.id)" >Eliminar</button>
+        </td></tr></tbody>
+        </table>
