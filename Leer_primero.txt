@@ -4,3 +4,13 @@ donde se esta desarrollando el CRUD es en: SemaforoCaloriasConJSVanilla.html
 
 ahi se agregaran quitaran y modificaran las comidas y se conocera su contenido calorico.
 no hice a tiempo de colocar imagenes.
+y en app/templates/ estan las carpetas views y urls con las que trabaje para la devolucion del json.
+
+
+y este es el tutorial del que estoy obteniendo la informacion para hacerlo.
+no explica mucho ni los comos ni los porques, pero funciona, una vez completo este curso vere toda la playlist de django de esta personay ahi comprendere mejor que estoy haciendo.
+
+https://www.youtube.com/watch?v=vNu3ZsiM2Q8&t=1443s
+
+
+

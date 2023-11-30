@@ -1,5 +1,5 @@
 
-
+/*
 
 let Calorico = "red"
 let Medio = "yellow"
@@ -69,3 +69,4 @@ const listaDeCaloriasJSON = [
         "calorias": "Pocas"
     }
 ];
+*/
