@@ -9,7 +9,9 @@ const datatableoptions ={
         {orderable: false, targets:[4]},
         {searchable: false, targets:[0,4]},
 
-    ]
+    ],
+    pageLength: 8,
+    destroy: true
 };
 
 
@@ -37,7 +39,9 @@ const listproducto=async()=>{
                     <td>${producto.nombre}</td>
                     <td>${producto.calorias}</td>
                     <td>${producto.color}</td>
-                    <td>${producto.color}</td>
+                    <td>
+                    <button class='btn' 'btn-primary'><i class='fa-solid' 'fa-pencil' ></i></button>
+                    </td>
                 </tr>
                 
             `;
