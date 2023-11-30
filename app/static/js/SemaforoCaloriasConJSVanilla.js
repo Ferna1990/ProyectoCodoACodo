@@ -7,7 +7,7 @@ const listproducto=async()=>{
         data.producto.forEach((producto,index)=>{            
             content+=`
                 <tr>
-                    <td>${index}</td>
+                    <td>${index+1}</td>
                     <td>${producto.nombre}</td>
                     <td>${producto.calorias}</td>
                     <td>${producto.color}</td>

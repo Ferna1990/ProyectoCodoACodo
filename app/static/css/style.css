@@ -1,7 +1,7 @@
 *{
   margin: 0.5;
   padding: 0%;
-  box-sizing: border-box;
+  
 }
 h1 {
     color:orangered
@@ -26,10 +26,6 @@ footer{
     text-decoration: underline 2px red;
 }
 .filtrador{
-  padding: 2%;
-  margin: 2%;
-}
-.table{
   padding: 2%;
   margin: 2%;
 }
