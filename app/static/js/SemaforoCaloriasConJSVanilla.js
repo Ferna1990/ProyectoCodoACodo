@@ -3,6 +3,15 @@ let datatable;
 let datatableisinit= false;
 
 
+const datatableoptions ={
+    columnDefs:[
+        {className:'centered', targets:[0,1,2,3,4]},
+        {orderable: false, targets:[4]},
+        {searchable: false, targets:[1,2,3,4]},
+
+    ]
+};
+
 
 const initdatatable = async()=>{
 if(datatableisinit){
@@ -10,7 +19,7 @@ if(datatableisinit){
 }
 await listproducto();
 
-datatable=$('#datatable-productos').datatable({});
+datatable = $('#datatable-productos').Datatable(datatableoptions);
 
 datatableisinit=true;
 }
