@@ -7,7 +7,7 @@ const datatableoptions ={
     columnDefs:[
         {className:'centered', targets:[0,1,2,3,4]},
         {orderable: false, targets:[4]},
-        {searchable: false, targets:[1,2,3,4]},
+        {searchable: false, targets:[0,4]},
 
     ]
 };
@@ -19,7 +19,7 @@ if(datatableisinit){
 }
 await listproducto();
 
-datatable = $('#datatable-productos').Datatable(datatableoptions);
+datatable = $("#datatable-productos").DataTable(datatableoptions);
 
 datatableisinit=true;
 }
@@ -37,7 +37,9 @@ const listproducto=async()=>{
                     <td>${producto.nombre}</td>
                     <td>${producto.calorias}</td>
                     <td>${producto.color}</td>
+                    <td>${producto.color}</td>
                 </tr>
+                
             `;
         });
         tablebody_producto.innerHTML = content;
