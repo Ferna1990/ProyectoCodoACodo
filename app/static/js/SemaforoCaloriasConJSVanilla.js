@@ -1,4 +1,21 @@
 
+let datatable;
+let datatableisinit= false;
+
+
+
+const initdatatable = async()=>{
+if(datatableisinit){
+    datatable.destroy();
+}
+await listproducto();
+
+datatable=$('#datatable-productos').datatable({});
+
+datatableisinit=true;
+}
+
+
 const listproducto=async()=>{
     try{
         const response=await fetch ('http://127.0.0.1:8000/app/list_productos/');
@@ -21,6 +38,6 @@ const listproducto=async()=>{
     }
 };
 window.addEventListener('load',async()=>{
-await listproducto();
+await initdatatable();
 });
 
