@@ -1,0 +1,6 @@
+en la carpeta app, se encuentra el proyecto en si, en la carpeta static (dentro de la carpreta app) se encuentran los archivos css y js
+y eb ka carpeta templates (dentro tambien de app) se encuentran los archivo html.
+donde se esta desarrollando el CRUD es en: SemaforoCaloriasConJSVanilla.html
+
+ahi se agregaran quitaran y modificaran las comidas y se conocera su contenido calorico.
+no hice a tiempo de colocar imagenes.
