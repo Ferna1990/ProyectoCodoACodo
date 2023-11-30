@@ -40,7 +40,8 @@ const listproducto=async()=>{
                     <td>${producto.calorias}</td>
                     <td>${producto.color}</td>
                     <td>
-                    <button class='btn' 'btn-primary'><i class='fa-solid' 'fa-pencil' ></i></button>
+                    <button class='btn btn-sm btn-primary'><i class='fa-solid fa-pencil'></i></button>
+                    <button class='btn btn-sm btn-danger'><i class='fa-solid fa-xmark'></i></button>
                     </td>
                 </tr>
                 
