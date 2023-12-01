@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import producto
 from django.http.response import JsonResponse
 
@@ -15,5 +15,12 @@ def list_productos(request):
     data= {'producto': productos}
     return JsonResponse(data)    
 
+def registrarproducto(request):
+    Nombre=request.POST['txtnombre']
+    Calorias=request.POST['txtcalorias']
+    Color=request.POST['txtcolor']
+
+    Producto = producto.objects.create(Nombre=Nombre, Calorias=Calorias, Color=Color)
+    return redirect('/')
 
 

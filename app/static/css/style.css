@@ -1,7 +1,10 @@
 *{
-  margin: 0.5;
-  padding: 0%;
+  margin: 0%;
+  padding: 0.5%;
   
+}
+.row{
+  margin: 1% !important;
 }
 h1 {
     color:orangered
@@ -82,6 +85,9 @@ header{
 .centered {
 text-align: center !important;
 vertical-align: middle !important;
+}
+.margin2{
+  margin: 1% !important;
 }
 
 @media (max-width: 922px) {
