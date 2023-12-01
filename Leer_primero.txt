@@ -21,3 +21,16 @@ https://www.youtube.com/watch?v=uSbDMs7Y9yI&t=381s
 
 
 
+
+
+
+
+
+solo pude hacer la parte del crud con el super usuario: http://127.0.0.1:8000/admin
+y la base de datos se puede ver en: http://127.0.0.1:8000/app
+
+
+no me da el tiempo ni la cabeza para hacer mas por ahora.
+
+
+

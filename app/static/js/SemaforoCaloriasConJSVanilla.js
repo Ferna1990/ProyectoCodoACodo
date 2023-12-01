@@ -40,8 +40,8 @@ const listproducto=async()=>{
                     <td>${producto.calorias}</td>
                     <td>${producto.color}</td>
                     <td>
-                    <button class='btn btn-sm btn-primary'><i class='fa-solid fa-pencil'></i></button>
-                    <button class='btn btn-sm btn-danger'><i class='fa-solid fa-xmark'></i></button>
+                   <button class='btn btn-sm btn-primary'><a href="edicionproducto/{{ID.prodcto}}"><i class='fa-solid fa-pencil'></a></i></button>
+                    <button class='btn btn-sm btn-danger'><a href="eliminacionproducto/{{ID.producto}}"><i class='fa-solid fa-xmark'></a></i></button>
                     </td>
                 </tr>
                 
@@ -57,3 +57,16 @@ window.addEventListener('load',async()=>{
 await initdatatable();
 });
 
+
+
+    const btnEliminacion = document.querySelectorAll(".btnEliminacion");
+
+    btnEliminacion.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            const confirmacion = confirm('¿Seguro de eliminar el curso?');
+            if (!confirmacion) {
+                e.preventDefault();
+            }
+        });
+    });
+    

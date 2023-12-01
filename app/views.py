@@ -15,12 +15,12 @@ def list_productos(request):
     data= {'producto': productos}
     return JsonResponse(data)    
 
-def registrarproducto(request):
+def registrarProducto(request):
     Nombre=request.POST['txtnombre']
     Calorias=request.POST['txtcalorias']
     Color=request.POST['txtcolor']
-
     Producto = producto.objects.create(Nombre=Nombre, Calorias=Calorias, Color=Color)
     return redirect('/')
+
 
 
