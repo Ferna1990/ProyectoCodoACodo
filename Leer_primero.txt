@@ -33,4 +33,10 @@ y la base de datos se puede ver en: http://127.0.0.1:8000/app
 no me da el tiempo ni la cabeza para hacer mas por ahora.
 
 
+superusiario:
+usuario: FERNA
+contraseña: 1234asdf
+
+
+
 
