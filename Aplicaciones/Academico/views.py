@@ -43,8 +43,8 @@ def editarProducto(request):
 
 
 def eliminarProducto(request, codigo):
-    producto = Curso.objects.get(codigo=codigo)
-    producto.delete()
+    curso = Curso.objects.get(codigo=codigo)
+    curso.delete()
 
     messages.success(request, '¡Producto eliminado!')
 
