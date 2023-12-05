@@ -6,9 +6,9 @@ from django.contrib import messages
 
 
 def home(request):
-    cursosListados = Curso.objects.all()
+    productosListados = Curso.objects.all()
     messages.success(request, '¡Producto listados!')
-    return render(request, "gestionProducto.html", {"cursos": cursosListados})
+    return render(request, "gestionProducto.html", {"cursos": productosListados})
 
 
 def registrarProducto(request):
@@ -16,15 +16,15 @@ def registrarProducto(request):
     nombre = request.POST['txtNombre']
     creditos = request.POST['numCreditos']
 
-    curso = Curso.objects.create(
+    producto = Curso.objects.create(
         codigo=codigo, nombre=nombre, creditos=creditos)
     messages.success(request, '¡Producto registrado!')
     return redirect('/')
 
 
 def edicionProducto(request, codigo):
-    curso = Curso.objects.get(codigo=codigo)
-    return render(request, "edicionProducto.html", {"curso": curso})
+    producto = Curso.objects.get(codigo=codigo)
+    return render(request, "edicionProducto.html", {"curso": producto})
 
 
 def editarProducto(request):
@@ -43,8 +43,8 @@ def editarProducto(request):
 
 
 def eliminarProducto(request, codigo):
-    curso = Curso.objects.get(codigo=codigo)
-    curso.delete()
+    producto = Curso.objects.get(codigo=codigo)
+    producto.delete()
 
     messages.success(request, '¡Producto eliminado!')
 
