@@ -1,2 +1,1 @@
-# grupo29
-Comidas Rapidas
+proyecto con ayuda de tutoriales de youtube, una lucha interminable. por eso el nombre de la base de datos, muchas veces probe poner otros nombre y siempre me tiraba algun error. por eso copie nombres que no coinciden con la bas ee datos de productos que era la que queria lograr

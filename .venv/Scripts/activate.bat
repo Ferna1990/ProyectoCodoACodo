@@ -1,4 +1,4 @@
-@set "VIRTUAL_ENV=C:\Users\Harry\Desktop\Programacion\codo_a_codo\Proyecto_CODOACODO\comidas_repidas\.venv"
+@set "VIRTUAL_ENV=C:\Users\Harry\Desktop\Programacion\codo_a_codo\PaginasWebs\Nueva carpeta (2)\django-crud-sqlite3-master\.venv"
 
 @set "VIRTUAL_ENV_PROMPT="
 @if NOT DEFINED VIRTUAL_ENV_PROMPT (
