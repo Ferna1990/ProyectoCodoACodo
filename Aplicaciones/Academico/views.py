@@ -7,7 +7,7 @@ from django.contrib import messages
 
 def home(request):
     productosListados = Curso.objects.all()
-    messages.success(request, '¡Producto listados!')
+    messages.success(request, '¡Productos listados!')
     return render(request, "gestionProducto.html", {"cursos": productosListados})
 
 

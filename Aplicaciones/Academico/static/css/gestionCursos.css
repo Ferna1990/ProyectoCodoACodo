@@ -1,12 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,300&display=swap');
+
 th,
 td {
   text-align: center;
   vertical-align: middle;
 }
 
-Body {background-color : rgb(239, 231, 246);}
+Body {
+  background-color : rgb(239, 231, 246);}
 
 
-.card {background-color : rgb(239, 231, 246);}
+.card {
+  background-color : rgb(239, 231, 246);}
 
-.form-control {background-color: rgba(0,0,0,.05);;}
+.form-control {
+  background-color: rgba(0,0,0,.05);}
+
+.navbar{
+  background-color: rgba(0,0,0,.05)!important;
+}
+
+footer{
+  font-family: 'Merriweather', serif;
+  position: relative;
+  text-align: end;
+  padding: 5%;
+  border: 1%;
+  border-color: antiquewhite;
+  background-color: rgba(0,0,0,.05);  
+
+}
