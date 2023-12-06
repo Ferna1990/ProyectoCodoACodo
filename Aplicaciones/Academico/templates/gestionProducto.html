@@ -56,8 +56,11 @@
                         <td>{{c.codigo}}</td>
                         <td>{{c.nombre}}</td>
                         <td>{{c.creditos}}</td>
-                        <td><a href="edicionProducto/{{c.codigo}}" class="btn btn-info">Editar</a></td>
-                        <td><a href="eliminarProducto/{{c.codigo}}" class="btn btn-danger btnEliminacion">Eliminar</a></td>
+                        <td><a href="edicionProducto/{{c.codigo}}" class="btn btn-info"><span class="material-symbols-outlined">change_circle</span>
+                            
+                            </span></a></td>
+                        <td><a href="eliminarProducto/{{c.codigo}}" class="btn btn-danger btnEliminacion"><span class="material-symbols-outlined">delete</span>
+                        </a></td>
                     </tr>
                     {% endfor %}
                 </tbody>
